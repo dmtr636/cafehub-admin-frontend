@@ -1,0 +1,9 @@
+@import "src/styles/vars";
+
+.layout {
+  padding: 40px;
+}
+
+.pageHeader {
+  @include pageHeader
+}
