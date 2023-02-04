@@ -23,3 +23,13 @@ $color-black: #181818;
   letter-spacing: 0.01em;
   color: #FFFFFF;
 }
+
+@mixin sidebarNestedMenuItem {
+  font-family: $fontRoboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+}

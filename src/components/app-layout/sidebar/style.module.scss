@@ -14,23 +14,41 @@
   @include sidebarMenuItem;
   opacity: 0.5;
   display: flex;
-  gap: 12px;
   align-items: center;
   padding: 8px 36px 8px 20px;
-}
 
-.menuItem:hover {
-  opacity: 1;
-}
+  &.active, &:hover {
+    opacity: 1;
+  }
 
-.menuItemActive {
-  opacity: 1;
+  path {
+    fill: #FFFFFF;
+  }
 }
 
 .itemIcon {
   height: 24px;
+  margin-right: 12px;
 }
 
-.itemIcon path {
-  fill: #FFFFFF;
+.arrowIcon {
+  margin-left: 6px;
+  transform-origin: center;
+  transition: all ease-out 0.2s;
+}
+
+.arrowIconActive {
+  transform: scaleY(-1);
+}
+
+.nestedMenu {
+  display: grid;
+  grid-gap: 8px;
+  margin-left: 56px;
+}
+
+.nestedMenuItem {
+  composes: menuItem;
+  @include sidebarNestedMenuItem;
+  padding: 0;
 }
