@@ -63,22 +63,23 @@ const Sidebar = () => {
                         </>
                     }
                 </NavLink>
-                {isOpen &&
-                    <div className={styles.nestedMenu}>
-                        {route.children?.map((route: ISidebarRoute) =>
-                            <NavLink
-                                to={route.path}
-                                className={({isActive}) => classNames(
-                                    styles.nestedMenuItem,
-                                    {[styles.active]: isActive}
-                                )}
-                                key={route.path}
-                            >
-                                {route.name}
-                            </NavLink>
-                        )}
-                    </div>
-                }
+                <div className={classNames(
+                    styles.nestedMenu,
+                    {[styles.open]: isOpen}
+                )}>
+                    {route.children?.map((route: ISidebarRoute) =>
+                        <NavLink
+                            to={route.path}
+                            className={({isActive}) => classNames(
+                                styles.nestedMenuItem,
+                                {[styles.active]: isActive}
+                            )}
+                            key={route.path}
+                        >
+                            {route.name}
+                        </NavLink>
+                    )}
+                </div>
             </>
         )
     }
