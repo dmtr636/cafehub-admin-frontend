@@ -1,5 +1,5 @@
 import {RouteObject} from "react-router-dom";
-import AppLayout from "../components/app-layout/app-layout/AppLayout";
+import AppLayout from "../components/appLayout/AppLayout/AppLayout";
 import {sidebarRoutes} from "./sidebarRoutes";
 
 export const routes: RouteObject[] = [
