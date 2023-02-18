@@ -1,10 +1,14 @@
 import React from 'react';
+import PageLayout from "@/components/layout/PageLayout/PageLayout";
+import {IconOrdersFilled} from "@/assets/icons";
 
 const OrdersPage = () => {
     return (
-        <div>
+        <PageLayout title={"Заказы"} icon={<IconOrdersFilled/>}>
+            <div>
 
-        </div>
+            </div>
+        </PageLayout>
     );
 };
 

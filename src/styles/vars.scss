@@ -1,18 +1,6 @@
-$fontFallback: sans-serif;
-$fontRoboto: 'Roboto', $fontFallback;
+$fontRoboto: 'Roboto', sans-serif;
 
 $color-black: #181818;
-
-/* Заголовок страницы */
-@mixin pageHeader {
-  font-family: $fontRoboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  letter-spacing: 0.02em;
-  color: $color-black;
-}
 
 @mixin sidebarMenuItem {
   font-family: $fontRoboto;

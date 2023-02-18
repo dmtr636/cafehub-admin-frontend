@@ -1,0 +1,31 @@
+@import "../../../styles/vars";
+
+.layout {
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  font-family: $fontRoboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+  color: $color-black;
+}

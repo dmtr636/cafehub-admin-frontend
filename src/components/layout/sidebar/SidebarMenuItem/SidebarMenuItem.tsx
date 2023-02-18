@@ -1,17 +1,29 @@
 import {ISidebarRoute} from "../../../../routes/sidebarRoutes";
-import React, {MouseEventHandler} from "react";
+import React, {MouseEventHandler, useEffect} from "react";
 import {NavLink} from "react-router-dom";
 import classNames from "classnames";
 import styles from "./style.module.scss";
 import {IconArrow} from "../../../../assets/icons";
+import {observer} from "mobx-react-lite";
+import {appStore} from "@/stores/appStore";
 
 const SidebarMenuItem = (props: {
     route: ISidebarRoute,
     nested?: boolean,
     onClick?: MouseEventHandler,
     open?: boolean,
+    onMatch?: () => void,
 }) => {
     const sidebarProps = props.route.sidebarProps
+    const store = appStore.sidebar
+    const isMatch = store.isMatch(props.route.path)
+    const isSearching = store.isSearching
+
+    useEffect(() => {
+        if (isMatch && props.onMatch) {
+            props.onMatch()
+        }
+    }, [isMatch])
 
     return (
         <NavLink
@@ -19,7 +31,8 @@ const SidebarMenuItem = (props: {
             className={({isActive}) => classNames(
                 styles.menuItem,
                 {[styles.nested]: props.nested},
-                {[styles.active]: isActive}
+                {[styles.active]: isActive && !isSearching},
+                {[styles.match]: isMatch}
             )}
             onClick={props.onClick}
         >
@@ -46,4 +59,4 @@ const SidebarMenuItem = (props: {
     )
 }
 
-export default SidebarMenuItem
+export default observer(SidebarMenuItem)

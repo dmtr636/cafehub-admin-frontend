@@ -1,10 +1,14 @@
 import React from 'react';
+import PageLayout from "@/components/layout/PageLayout/PageLayout";
+import {IconSettingFilled} from "@/assets/icons";
 
 const SettingsPage = () => {
     return (
-        <div>
+        <PageLayout title={"Настройки"} icon={<IconSettingFilled/>}>
+            <div>
 
-        </div>
+            </div>
+        </PageLayout>
     );
 };
 

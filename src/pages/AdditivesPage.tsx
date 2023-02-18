@@ -1,10 +1,14 @@
 import React from 'react';
+import PageLayout from "@/components/layout/PageLayout/PageLayout";
+import {IconAdditivesFilled} from "@/assets/icons";
 
 const AdditivesPage = () => {
     return (
-        <div>
+        <PageLayout title={"Добавки"} icon={<IconAdditivesFilled/>}>
+            <div>
 
-        </div>
+            </div>
+        </PageLayout>
     );
 };
 

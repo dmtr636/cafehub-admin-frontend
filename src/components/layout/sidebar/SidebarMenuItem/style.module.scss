@@ -2,18 +2,22 @@
 
 .menuItem {
   @include sidebarMenuItem;
-  opacity: 0.5;
   display: flex;
   align-items: center;
   padding: 8px 0;
+  opacity: 0.5;
 
   &.active, &:hover {
     opacity: 1;
   }
 
+  &.match {
+    opacity: 0.9;
+  }
+
   &.nested {
     @include sidebarNestedMenuItem;
-    padding: 0;
+    padding: 4px 0;
   }
 
   path {

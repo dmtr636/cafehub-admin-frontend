@@ -1,10 +1,14 @@
 import React from 'react';
+import PageLayout from "@/components/layout/PageLayout/PageLayout";
+import {IconMainFilled} from "@/assets/icons";
 
 const MainPage = () => {
     return (
-        <div>
+        <PageLayout title={"Главная"} icon={<IconMainFilled/>}>
+            <div>
 
-        </div>
+            </div>
+        </PageLayout>
     );
 };
 
